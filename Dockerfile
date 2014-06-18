@@ -23,5 +23,5 @@ RUN make -j8
 MAINTAINER Philipp Hug <philipp@hug.cx>
 VOLUME /data
 EXPOSE 5000
-CMD ["/osrm/project-osrm/build/osrm-routed", "/data/data.osrm", "-c", "/osrm/project-osrm/server.ini"]
+CMD ["/osrm/project-osrm/build/osrm-routed", "/data/planet-latest.osrm", "-c", "/osrm/project-osrm/server.ini"]
 
