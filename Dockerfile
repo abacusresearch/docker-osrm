@@ -14,7 +14,7 @@ RUN cd /osrm/project-osrm && git checkout v0.3.10
 
 RUN mkdir -p /osrm/project-osrm/build
 
-ADD server.ini /osrm/project-osrm/server.ini
+#ADD server.ini /osrm/project-osrm/server.ini
 
 WORKDIR /osrm/project-osrm/build
 RUN cmake ..
@@ -23,5 +23,5 @@ RUN make -j8
 MAINTAINER Philipp Hug <philipp@hug.cx>
 VOLUME /data
 EXPOSE 5000
-CMD ["/osrm/project-osrm/build/osrm-routed", "/data/planet-latest.osrm", "-c", "/osrm/project-osrm/server.ini"]
+CMD ["/osrm/project-osrm/build/osrm-routed", "/data/planet-latest.osrm"]
 
